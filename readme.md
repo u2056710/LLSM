@@ -13,7 +13,9 @@ ______________________________________________________________________________
 
 This programme is to be used for the processing of raw lattice light sheet data, and has two main features (1) deskewing and creating maximum projections of raw lattice light sheet data and (2) performing microtubule track analysis using U-track (Danuser Lab).  
 
-The code takes a directory containing .SLD files to be analysed as input.  The programme will create a folder called “Projections” in the sample directory, in which the deskewed and maximally projected TIFs will be saved.  If you also selected U-Track analysis, the code will also create a folder called “U-Track Output” in which the U-Track output will be saved.  This U-track output contains several files, which then need to be analysed.  
+The code takes a directory containing .SLD files to be analysed as input.  IMPORTANT:  For a specific experiment, save your .SLDs in a sub-folder.  Do not save them in your User folder (because in that case, the code will process every single .SLD - there is no way to select specifc ones).  So, make sure to create a sub-folder for your specific experiment, and save the .SLD files in there.    
+
+The programme will create a folder called “Projections” in the sample directory, in which the deskewed and maximally projected TIFs will be saved.  If you also selected U-Track analysis, the code will also create a folder called “U-Track Output” in which the U-Track output will be saved.  This U-track output contains several files, which then need to be analysed.  
 
 ### 1.2 License
 
