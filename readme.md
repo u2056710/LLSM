@@ -13,7 +13,7 @@ ______________________________________________________________________________
 
 This programme is to be used for the processing of raw lattice light sheet data, and has two main features (1) deskewing and creating maximum projections of raw lattice light sheet data and (2) performing microtubule track analysis using U-track (Danuser Lab).  
 
-The code takes a directory containing .SLD files to be analysed as input.  IMPORTANT:  For a specific experiment, save your .SLDs in a sub-folder.  Do not save them in your User folder (because in that case, the code will process every single .SLD - there is no way to select specifc ones).  So, make sure to create a sub-folder for your specific experiment, and save the .SLD files in there.    
+The code takes a directory containing .SLD files to be analysed as input.  IMPORTANT:  For a specific experiment, save your .SLDs in a sub-folder.  Do not save them in your User folder (because in that case, the code will process every single .SLD - there is no way to select specifc ones).  So, make sure to create a sub-folder for your specific experiment, and save the .SLD files in there.  Also ensure that your .SLD file does not contain any already deskewed/maximally projected images, and just contains the raw captures.  
 
 The programme will create a folder called “Projections” in the sample directory, in which the deskewed and maximally projected TIFs will be saved.  If you also selected U-Track analysis, the code will also create a folder called “U-Track Output” in which the U-Track output will be saved.  This U-track output contains several files, which then need to be analysed.  
 
@@ -27,7 +27,7 @@ This programme is free software: you can redistribute it and/or modify it under 
 Operating systems:   Windows 10 64-bit, Linux 20.04.2 LTS,  MacOS Catalina Version 10.15.7 
 MATLAB version: 2020b 
 
-This programme requires [Bio-Formats](https://www.openmicroscopy.org/bio-formats/downloads/) (Glencoe, Seattle, WA).  To run the U-track component of this programme, you will also need to Install [U-track software](https://github.com/DanuserLab/u-track) (Danuser Lab, Jaqaman Lab).  Note that in this case, you will also need to ensure that you have the requirements for U-Track, which can be found in the U-Track readme file.  
+This programme requires [Bio-Formats](https://3i.my.salesforce.com/sfc/p/#f40000002czJ/a/2S0000009H2j/Kwq9n_6pZwjez.bHU4mJBbNwdI3L0JX_K3iqDuBEWJI) (Glencoe, Seattle, WA).  To run the U-track component of this programme, you will also need to Install [U-track software](https://github.com/DanuserLab/u-track) (Danuser Lab, Jaqaman Lab).  Note that in this case, you will also need to ensure that you have the requirements for U-Track, which can be found in the U-Track readme file.  
 
 For optimal performance, the MATLAB [Parallel Computing Toolbox (PCT)](https://uk.mathworks.com/products/parallel-computing.html?requestedDomain=) must be installed.
 
@@ -69,5 +69,4 @@ This code assumes a pixel resolution of 104 nm, and a light sheet angle of 32.8&
 For optimal processing speed, we would recommend saving your images across several .SLD files.  For example, saving captures from your control condition into one .SLD file, and each of the conditions into .SLD files.  This allows the images to be processed in parallel.  
 
 We would also recommend testing a large interpolation number (slow) and a fast interpolation number (fast) and checking the error associated with the different numbers for your purposes.   
- 
 

@@ -15,7 +15,7 @@ function [output2] = process(array, high, wide, nFrames, shift, interp_by)
     for i = 1:nFrames                          %iterate through each of the planes
         A = array{i, 1};                       %array contains all of the planes so extract the plane
         A = transpose(A);
-        Vq = interp1(x_orig,A,x_mod,'pchip');  % interpolate each line by 10
+        Vq = interp1(x_orig,A,x_mod,'pchip');  % interpolate each line by appropriate amount
         
         for j = 1:size(Vq, 2)                      
             
@@ -37,7 +37,7 @@ function [output2] = process(array, high, wide, nFrames, shift, interp_by)
     
                                                 
     Vq = interp1(x_mod,output,x_final,'pchip');    %and back interpolate
-    output2 = transpose(Vq);                            %transpose back
+    output2 = transpose(Vq);                       %transpose back
  
     output2 = uint16(output2);              %convert output to 16-bit array
     
